@@ -420,12 +420,20 @@
     .hero-stats { gap: 24px; }
     .partners { padding: 20px; gap: 24px; }
   }
+  @media (max-width: 768px) {
+    .hero { flex-direction: column; align-items: flex-start; }
+    .hero-qualiopi-block { width: 100% !important; flex-shrink: 1 !important; margin-top: 32px; }
+    .hero-stats { flex-wrap: nowrap; gap: 0; justify-content: space-around; background: rgba(0,0,0,0.50); border-radius: 12px; padding: 14px 8px; border-top: none; margin-top: 28px; }
+    .stat-item { flex: 1; }
+    .stat-number { font-size: 1.5rem; }
+    .stat-label { font-size: 0.7rem; }
+  }
   @media (max-width: 600px) {
     .formations-grid { grid-template-columns: 1fr; }
     .tarifs-grid { grid-template-columns: 1fr; }
     .why-grid { grid-template-columns: 1fr 1fr; }
     .footer-top { grid-template-columns: 1fr; }
-    .hero-stats { flex-wrap: wrap; }
+    .hero-stats { flex-wrap: nowrap; }
   }
 
   /* ── CARD IMAGE ── */
@@ -495,7 +503,7 @@
       <div class="stat-item"><div class="stat-number">CPF</div><div class="stat-label">Éligible financement</div></div>
     </div>
   </div>
-  <div style="width:300px;flex-shrink:0;display:flex;flex-direction:column;gap:0.8rem;margin-top:0;">
+  <div class="hero-qualiopi-block" style="width:300px;flex-shrink:0;display:flex;flex-direction:column;gap:0.8rem;margin-top:0;">
     <!-- BLOC QUALIOPI -->
     <div style="background:rgba(255,255,255,0.15);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-radius:14px;padding:calc(1.3rem + 10px) 1.4rem;display:flex;flex-direction:column;align-items:center;text-align:center;box-shadow:0 12px 40px rgba(0,0,0,0.45);">
       <img
